@@ -40,8 +40,8 @@ Ce projet est une application web simple permettant de **gérer les informations
 
 ## 📦 Structure du projet
 
-/Gestion-de-employes
-│
+/Gestion-de-employes<br>
+│<br>
 ├── connexion.php <br>
 ├── index.php ← Page d’accueil avec la liste des employés<br>
 ├── ajouter.php ← Formulaire d’ajout<br>
