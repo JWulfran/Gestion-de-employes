@@ -25,8 +25,14 @@
             include_once "connexion.php";
             // Afficher la liste des employés
             $request = mysqli_query($connexion, "SELECT * FROM employe_main_db");
-            if (mysqli_num_rows($request) == 0) {
-                echo "Vous n'avez pas encore ajouter d'employé!";
+            while ($row = mysqli_fetch_array($request)) {
+                echo "<tr>";
+                echo "<td>" . $row['nom'] . "</td>";
+                echo "<td>" . $row['prenom'] . "</td>";
+                echo "<td>" . $row['age'] . "</td>";
+                echo "<td><a href='modifier.php?id=" . $row['id'] . "' class='Btn_edit'><img src='./images/pen.png'></a></td>";
+                echo "<td><a href='delete.php?id=" . $row['id'] . "' class='Btn_delete'><img src='./images/trash.png'></a></td>";
+                echo "</tr>";
             }
             ?>
         </table>

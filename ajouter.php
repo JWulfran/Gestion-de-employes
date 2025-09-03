@@ -9,11 +9,32 @@
 </head>
 
 <body>
+    <?php
+    if (isset($_POST['button'])) {
+        extract($_POST);
+        if (isset($nom) && isset($prenom) && isset($age)) {
+            include_once "connexion.php";
+            $request = mysqli_query($connexion, "INSERT INTO employe_main_db VALUES(NULL, '$nom','$prenom','$age')");
+            if ($request) {
+                header("location: index.php");
+            } else {
+                $error_message = "Erreur : Employé non ajouté!";
+            }
+        } else {
+            $error_message = "Veuillez remplir tous les champs!";
+        }
+    }
+
+    ?>
     <div class="form">
         <a href="index.php" class="back_btn"><img src="./images/back.png">Retour</a>
         <h2>Ajouter un employé</h2>
         <p class="error_message">
-            Veuillez remplir tous les champs!
+            <?php
+            if (isset($error_message)) {
+                echo $error_message;
+            }
+            ?>
         </p>
         <form action="" method="post">
             <label>Nom</label>
