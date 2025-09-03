@@ -42,12 +42,12 @@ Ce projet est une application web simple permettant de **gérer les informations
 
 /Gestion-de-employes
 │
-├── connexion.php
-├── index.php ← Page d’accueil avec la liste des employés
-├── ajouter.php ← Formulaire d’ajout
-├── modifier.php ← Formulaire de modification
-├── supprimer.php ← Suppression par ID
-└── css/ ← (facultatif) fichier de styles
+├── connexion.php <br>
+├── index.php ← Page d’accueil avec la liste des employés<br>
+├── ajouter.php ← Formulaire d’ajout<br>
+├── modifier.php ← Formulaire de modification<br>
+├── supprimer.php ← Suppression par ID<br>
+└── css/ ← (facultatif) fichier de styles<br>
 
 ---
 
